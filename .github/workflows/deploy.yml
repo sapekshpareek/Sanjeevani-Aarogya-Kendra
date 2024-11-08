@@ -2,33 +2,23 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [dev]
-
-permissions:
-  contents: write
+    branches:
+      - main  # or your chosen branch for deployment
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: "18"
-
-      - name: Install Dependencies
-        run: npm install --legacy-peer-deps
-
-      - name: Build
-        run: npm run build
-
-      - name: Deploy
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - name: Install dependencies and build
+        run: |
+          npm install
+          npm run build  # This will now create the 'out' folder
+      
+      - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages # Target branch for GitHub Pages
-          folder: out # Folder with the static export output
-          clean: true # Optional: Clean the target branch before deployment
+          branch: gh-pages  # deployment branch
+          folder: out       # path to the static output folder
