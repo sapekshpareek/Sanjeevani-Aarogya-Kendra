@@ -34,10 +34,11 @@ const HeroSection = () => {
             <FadeInView delay={0.3}>
               <div className="relative h-96 w-96 overflow-hidden rounded-lg shadow-xl lg:h-[28rem] lg:w-[28rem]">
                 <Image
-                  src="/images/doctor-hero.jpg"
+                  src="/images/hero2.jpg"
                   alt="Dr. Ravi Pandey - Dermatology Expert"
                   layout="fill"
                   objectFit="cover"
+                  background="black"
                   className="transition-transform duration-500 group-hover:scale-105"
                   priority
                 />

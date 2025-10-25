@@ -39,20 +39,20 @@ const ResultsSection = () => {
     {
       headline: "Elias: Restoring Uniformity, Renewing Life.",
       teaser: "Struggled with generalized Vitiligo coverage for years. Achieved significant repigmentation and lasting skin uniformity through targeted light therapy.",
-      beforeImg: "/images/placeholder.jpg",
-      afterImg: "/images/testimonials/patient1.jpg",
+      beforeImg: "/images/testimonials/girl1.jpg",
+      afterImg: "/images/testimonials/girl12.jpg",
     },
     {
       headline: "Amelia: Precision Pigment Correction.",
       teaser: "Complex Melasma dramatically lightened and managed using a multi-phase treatment protocol focused on cellular stabilization and long-term control.",
-      beforeImg: "/images/placeholder.jpg",
-      afterImg: "/images/testimonials/patient2.jpg",
+      beforeImg: "/images/testimonials/legs1.jpg",
+      afterImg: "/images/testimonials/legs12.jpg",
     },
     {
       headline: "Daniel: Healing the Challenging Cases.",
       teaser: "Rare pigmentary disorder stabilized and improved through an aggressive, custom biological approach, restoring balance where previous treatments failed.",
-      beforeImg: "/images/placeholder.jpg",
-      afterImg: "/images/testimonials/patient3.jpg",
+      beforeImg: "/images/testimonials/legs2.jpg",
+      afterImg: "/images/testimonials/legs22.jpg",
     },
   ];
 

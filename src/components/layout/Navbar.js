@@ -27,8 +27,8 @@ export default function Navbar() {
       <nav className="container mx-auto flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
-            <Image className="h-8 w-auto" src="/images/logo.png" alt="Logo" width={2} height={2} />
-            {/* <span className="font-bold text-xl text-gray-900">Dr. Ravi Pandey</span> */}
+            <Image className="h-8 w-auto" src="/images/logo2.png" alt="Logo" width={150} height={200} />
+            <span className="font-bold text-xl text-gray-900">Sanjeevani Aarogya Kendra</span>
           </Link>
         </div>
         <div className="flex lg:hidden">
