@@ -1,3 +1,4 @@
+import "../styles/globals.css";
 import MainLayout from "../components/layout/MainLayout";
 import SEO from "../components/SEO";
 

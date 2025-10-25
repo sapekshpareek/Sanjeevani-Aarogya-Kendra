@@ -65,7 +65,7 @@ export const serviceImages = {
 export const generalImages = {
   hero: {
     primary:
-      "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80",
+      "https://res.cloudinary.com/daw4ojh5s/image/upload/fl_preserve_transparency/v1761406632/1_npd3vk.jpg?_s=public-apps",
     fallback:
       "https://images.unsplash.com/photo-1579684453423-f84349ef60b0?auto=format&fit=crop&q=80",
   },

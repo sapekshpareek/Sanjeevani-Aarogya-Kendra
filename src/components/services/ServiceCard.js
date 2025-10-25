@@ -1,47 +1,42 @@
-import { Card, CardContent, Typography, Button, Box } from "@mui/material";
-import { useRouter } from "next/router";
-import OptimizedImage from "../common/OptimizedImage";
-import { serviceImages } from "../../config/images";
-import ErrorBoundary from "../common/ErrorBoundary";
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
-export default function ServiceCard({ service }) {
-  const router = useRouter();
-  const images = serviceImages[service.id];
+// Accepts either a `service` object or individual props
+const ServiceCard = ({ service, id, name, title, description, image, imageUrl, link }) => {
+  const svc = service || {};
+  const displayTitle = svc.title || title || name || 'Service';
+  const displayDesc = svc.description || description || '';
+  const href = link || (svc.id ? `/services/${svc.id}` : id ? `/services/${id}` : '/services');
+  const src = svc.image || image || imageUrl || '/images/placeholder.jpg';
 
   return (
-    <Card sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
-      <Box sx={{ height: 240, overflow: "hidden" }}>
-        <ErrorBoundary>
-          <OptimizedImage
-            src={images.primary}
-            fallbackSrc={images.fallback}
-            alt={service.title}
-            style={{
-              transition: "transform 0.3s",
-              "&:hover": {
-                transform: "scale(1.05)",
-              },
-            }}
+    <Link href={href} className="block group h-full">
+      <div className="relative h-full rounded-lg overflow-hidden shadow-lg bg-white transition-shadow duration-300 hover:shadow-2xl">
+        <div className="relative h-56 w-full">
+          <Image
+            src={src}
+            alt={displayTitle}
+            layout="fill"
+            objectFit="cover"
+            className="transition-transform duration-500 group-hover:scale-110"
           />
-        </ErrorBoundary>
-      </Box>
-      <CardContent sx={{ flexGrow: 1 }}>
-        <Typography gutterBottom variant="h5" component="h2">
-          {service.title}
-        </Typography>
-        <Typography variant="body1" color="text.secondary" paragraph>
-          {service.description}
-        </Typography>
-        <Box sx={{ mt: 2 }}>
-          <Button
-            variant="contained"
-            color="primary"
-            onClick={() => router.push(`/services/${service.id}`)}
-          >
-            Learn More
-          </Button>
-        </Box>
-      </CardContent>
-    </Card>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+        </div>
+        <div className="p-6">
+          <h3 className="text-xl font-bold text-gray-900">{displayTitle}</h3>
+          <p className="mt-2 text-gray-600 text-sm">{displayDesc}</p>
+        </div>
+         <div className="absolute bottom-6 right-6 transform translate-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+           <div className="bg-teal-400 text-gray-900 rounded-full p-2">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+           </div>
+         </div>
+      </div>
+    </Link>
   );
-}
+};
+
+export default ServiceCard;

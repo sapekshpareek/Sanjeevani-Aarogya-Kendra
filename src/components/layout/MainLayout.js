@@ -1,24 +1,19 @@
-import { Box, ThemeProvider, CssBaseline } from "@mui/material";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-import WhatsAppButton from "../WhatsAppButton";
-import { theme } from "../../theme/theme";
+import React from 'react';
+import Navbar from './Navbar';
+import Footer from './Footer';
+import WhatsAppButton from '../WhatsAppButton';
 
-export default function MainLayout({ children }) {
+const MainLayout = ({ children }) => {
   return (
-    <ThemeProvider theme={theme}>
-      {/* CssBaseline removes default browser styles (e.g., body margin) */}
-      <CssBaseline />
-      <Box
-        sx={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}
-      >
-        <Navbar />
-        <Box component="main" sx={{ flexGrow: 1 }}>
-          {children}
-        </Box>
-        <Footer />
-        <WhatsAppButton />
-      </Box>
-    </ThemeProvider>
+    <div className="flex flex-col min-h-screen bg-white">
+      <Navbar />
+      <main className="flex-grow">
+        {children}
+      </main>
+      <WhatsAppButton />
+      <Footer />
+    </div>
   );
-}
+};
+
+export default MainLayout;

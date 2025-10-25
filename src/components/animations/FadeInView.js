@@ -1,27 +1,27 @@
-import { Box } from "@mui/material";
-import { keyframes } from "@emotion/react";
-
-const fadeIn = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`;
+import { useEffect, useState } from 'react';
 
 export default function FadeInView({ children, delay = 0 }) {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Only run animation on client side
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, delay * 1000);
+
+    return () => clearTimeout(timer);
+  }, [delay]);
+
   return (
-    <Box
-      sx={{
-        animation: `${fadeIn} 0.6s ease-out forwards`,
-        animationDelay: `${delay}s`,
-        opacity: 0,
+    <div
+      className="transition-all duration-600 ease-out"
+      style={{
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
+        transitionDelay: `${delay}s`,
       }}
     >
       {children}
-    </Box>
+    </div>
   );
 }

@@ -1,95 +1,53 @@
-import { Box, Container, Typography, Button, Stack } from "@mui/material";
-import { generalImages } from "../../config/images";
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import FadeInView from '../animations/FadeInView';
 
-export default function HeroSection() {
+const HeroSection = () => {
   return (
-    <Box
-      sx={{
-        position: "relative",
-        width: "100%",
-        minHeight: { xs: "100vh", md: "93vh" },
-        display: "flex",
-        "&::before": {
-          content: '""',
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          backgroundImage: `url(${generalImages.hero.primary})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          filter: "brightness(0.6)",
-          zIndex: -1,
-        },
-      }}
-    >
-      <Container
-        maxWidth="lg"
-        sx={{
-          position: "relative",
-          zIndex: 1,
-          margin: "auto",
-          color: "white",
-          py: { xs: 8, md: 12 },
-        }}
-      >
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: { xs: "column", md: "row" },
-            alignItems: "center",
-            gap: 4,
-          }}
-        >
-          <Box sx={{ flex: 1, textAlign: { xs: "center", md: "left" } }}>
-            <Typography
-              variant="h1"
-              sx={{
-                fontSize: { xs: "2.5rem", md: "3.5rem" },
-                mb: 2,
-                fontWeight: 700,
-              }}
-            >
-              Your Journey to Better Health Starts Here
-            </Typography>
-            <Typography variant="h2" sx={{ mb: 4, fontSize: "1.5rem" }}>
-              Dr. Ravi Pandey - Expert Dermatologist & Healthcare Specialist
-            </Typography>
-            <Stack
-              direction={{ xs: "column", sm: "row" }}
-              spacing={2}
-              justifyContent={{ xs: "center", md: "flex-start" }}
-            >
-              <Button
-                variant="contained"
-                color="secondary"
-                size="large"
-                href="tel:+919131170076"
-              >
-                Book Appointment
-              </Button>
-              <Button
-                variant="outlined"
-                color="inherit"
-                size="large"
-                href="/services"
-              >
-                Our Services
-              </Button>
-            </Stack>
-          </Box>
-          <Box
-            sx={{
-              flex: 1,
-              display: { xs: "none", md: "block" },
-              bgcolor: "rgba(255, 255, 255, 0.1)",
-              borderRadius: "10px",
-              height: "400px",
-            }}
-          />
-        </Box>
-      </Container>
-    </Box>
+    <section className="bg-white text-gray-900">
+      <div className="container mx-auto px-6 py-24 sm:py-32 lg:px-8">
+        <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
+          <div className="text-center lg:text-left">
+            <FadeInView>
+              <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
+                Your Skin’s Future is Clear.
+              </h1>
+            </FadeInView>
+            <FadeInView delay={0.1}>
+              <p className="mt-6 text-lg leading-8 text-gray-700">
+                Board-Certified Dermatology for Complex Cases. We deliver the stunning, lasting results others couldn't—because your skin deserves <span className="text-teal-500 font-semibold">decisive</span> expertise.
+              </p>
+            </FadeInView>
+            <FadeInView delay={0.2}>
+              <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
+                <Link href="#results" className="rounded-md bg-teal-400 px-4 py-3 text-sm font-semibold text-gray-900 shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 transition-colors">
+                  See Our Transformations
+                </Link>
+                <Link href="/contact" className="text-sm font-semibold leading-6 text-gray-900 hover:text-gray-700">
+                  Book Consultation <span aria-hidden="true">→</span>
+                </Link>
+              </div>
+            </FadeInView>
+          </div>
+          <div className="flex justify-center">
+            <FadeInView delay={0.3}>
+              <div className="relative h-96 w-96 overflow-hidden rounded-lg shadow-xl lg:h-[28rem] lg:w-[28rem]">
+                <Image
+                  src="/images/doctor-hero.jpg"
+                  alt="Dr. Ravi Pandey - Dermatology Expert"
+                  layout="fill"
+                  objectFit="cover"
+                  className="transition-transform duration-500 group-hover:scale-105"
+                  priority
+                />
+              </div>
+            </FadeInView>
+          </div>
+        </div>
+      </div>
+    </section>
   );
-}
+};
+
+export default HeroSection;

@@ -1,94 +1,81 @@
-import {
-  Box,
-  Container,
-  Grid,
-  Typography,
-  Link,
-  Divider,
-  Stack,
-} from "@mui/material";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import PhoneIcon from "@mui/icons-material/Phone";
-import EmailIcon from "@mui/icons-material/Email";
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+
+const navigation = {
+  solutions: [
+    { name: 'Results', href: '#results' },
+    { name: 'Services', href: '#services' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+  ],
+  legal: [
+    { name: 'Privacy Policy', href: '/privacy-policy' },
+    { name: 'Terms of Service', href: '/terms' },
+  ],
+}
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
-
   return (
-    <Box
-      component="footer"
-      sx={{
-        bgcolor: "primary.main",
-        color: "white",
-        py: 6,
-        mt: "auto",
-      }}
-    >
-      <Container maxWidth="lg">
-        <Grid container spacing={4}>
-          <Grid item xs={12} md={4}>
-            <Typography variant="h6" gutterBottom>
-              Sanjeevni Arogya Kendra
-            </Typography>
-            <Stack spacing={2}>
-              <Box sx={{ display: "flex", gap: 1 }}>
-                <LocationOnIcon />
-                <Typography variant="body2">
-                  In front of 96 shops, Kanasiya Naka, Maksi, District Shajapur
-                  (M.P.) 465106
-                </Typography>
-              </Box>
-            </Stack>
-          </Grid>
-
-          <Grid item xs={12} md={4}>
-            <Typography variant="h6" gutterBottom>
-              Contact Us
-            </Typography>
-            <Stack spacing={2}>
-              <Link
-                href="tel:+919131170076"
-                color="inherit"
-                sx={{ display: "flex", gap: 1 }}
-              >
-                <PhoneIcon />
-                <Typography>+91 91311 70076</Typography>
-              </Link>
-              <Link
-                href="tel:+917000563123"
-                color="inherit"
-                sx={{ display: "flex", gap: 1 }}
-              >
-                <PhoneIcon />
-                <Typography>+91 7000563123</Typography>
-              </Link>
-            </Stack>
-          </Grid>
-
-          <Grid item xs={12} md={4}>
-            <Typography variant="h6" gutterBottom>
-              Quick Links
-            </Typography>
-            <Stack spacing={1}>
-              <Link href="/privacy-policy" color="inherit">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" color="inherit">
-                Terms & Conditions
-              </Link>
-              <Link href="/sitemap" color="inherit">
-                Sitemap
-              </Link>
-            </Stack>
-          </Grid>
-        </Grid>
-
-        <Divider sx={{ my: 4, borderColor: "rgba(255, 255, 255, 0.1)" }} />
-
-        <Typography variant="body2" align="center">
-          © {currentYear} Sanjeevni Arogya Kendra. All rights reserved.
-        </Typography>
-      </Container>
-    </Box>
-  );
+    <footer className="bg-gray-900" aria-labelledby="footer-heading">
+      <h2 id="footer-heading" className="sr-only">
+        Footer
+      </h2>
+      <div className="container mx-auto px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
+          <div className="space-y-8">
+             <Link href="/" className="flex items-center gap-2">
+               <Image className="h-10 w-auto" src="/images/logo.png" alt="Logo" width={40} height={40} />
+               <span className="font-bold text-2xl text-white">Dr. Ravi Pandey</span>
+            </Link>
+            <p className="text-sm leading-6 text-gray-300">
+              Delivering stunning, lasting results for complex skin conditions.
+            </p>
+            {/* Social media links can go here */}
+          </div>
+          <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+            <div className="md:grid md:grid-cols-2 md:gap-8">
+              <div>
+                <h3 className="text-sm font-semibold leading-6 text-white">Solutions</h3>
+                <ul role="list" className="mt-6 space-y-4">
+                  {navigation.solutions.map((item) => (
+                    <li key={item.name}>
+                      <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-teal-400">
+                        {item.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="mt-10 md:mt-0">
+                <h3 className="text-sm font-semibold leading-6 text-white">Legal</h3>
+                <ul role="list" className="mt-6 space-y-4">
+                  {navigation.legal.map((item) => (
+                    <li key={item.name}>
+                       <Link href={item.href} className="text-sm leading-6 text-gray-300 hover:text-teal-400">
+                        {item.name}
+                       </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <div className="md:grid md:grid-cols-1 md:gap-8">
+               <div>
+                <h3 className="text-sm font-semibold leading-6 text-white">Contact Us</h3>
+                 <div className="mt-6 space-y-4 text-sm text-gray-300">
+                    <p>123 Health St, Wellness City, 45678</p>
+                    <p><a href="tel:+1234567890" className="hover:text-teal-400">+1 (234) 567-890</a></p>
+                    <p><a href="mailto:consult@drpandey.com" className="hover:text-teal-400">consult@drpandey.com</a></p>
+                 </div>
+               </div>
+            </div>
+          </div>
+        </div>
+        <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
+          <p className="text-xs leading-5 text-gray-400">&copy; {new Date().getFullYear()} Dr. Ravi Pandey. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  )
 }

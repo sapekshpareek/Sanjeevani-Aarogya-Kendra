@@ -1,103 +1,72 @@
-import {
-  Box,
-  Container,
-  Typography,
-  Card,
-  CardContent,
-  Avatar,
-  Rating,
-} from "@mui/material";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import React from 'react';
+import Image from 'next/image';
+import FadeInView from '../animations/FadeInView';
 
 const testimonials = [
   {
-    name: "Rajesh Kumar",
-    rating: 5,
-    comment:
-      "Dr. Pandey's treatment for my vitiligo showed remarkable results. His approach is very professional and caring.",
-    image: "/images/testimonials/patient1.jpg",
+    quote: "After years of struggling with Vitiligo and getting no results, Dr. Pandey's approach was a game-changer. I finally have my confidence back.",
+    name: 'Elias M.',
+    imageUrl: '/images/testimonials/patient1.jpg',
+    condition: 'Vitiligo Patient'
   },
   {
-    name: "Priya Sharma",
-    rating: 5,
-    comment:
-      "I had been struggling with psoriasis for years. The treatment at Sanjeevni Arogya Kendra has been life-changing.",
-    image: "/images/testimonials/patient2.jpg",
+    quote: "The care and attention to detail here are unmatched. My complex skin condition is finally under control. I couldn't be more grateful.",
+    name: 'Amelia S.',
+    imageUrl: '/images/testimonials/patient2.jpg',
+    condition: 'Pigment Correction Patient'
   },
   {
-    name: "Amit Patel",
-    rating: 5,
-    comment:
-      "Excellent care and treatment. The staff is very supportive and Dr. Pandey explains everything clearly.",
-    image: "/images/testimonials/patient3.jpg",
+    quote: "I had a rare condition that other doctors dismissed. Dr. Pandey not only diagnosed it correctly but created a treatment that worked. Truly life-changing.",
+    name: 'Daniel K.',
+    imageUrl: '/images/testimonials/patient3.jpg',
+    condition: 'Rare Disorder Patient'
   },
 ];
 
-export default function TestimonialsSection() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  };
+const TestimonialCard = ({ testimonial, delay }) => (
+    <FadeInView delay={delay}>
+        <figure className="bg-white p-8 rounded-lg shadow-lg h-full flex flex-col">
+            <blockquote className="text-gray-700 flex-grow">
+                <p>“{testimonial.quote}”</p>
+            </blockquote>
+            <figcaption className="mt-6 flex items-center gap-x-4">
+                <div className="relative h-12 w-12 rounded-full overflow-hidden">
+                    <Image
+                        src={testimonial.imageUrl}
+                        alt={testimonial.name}
+                        layout="fill"
+                        objectFit="cover"
+                    />
+                </div>
+                <div>
+                    <div className="font-semibold text-gray-900">{testimonial.name}</div>
+                    <div className="text-gray-600 text-sm">{testimonial.condition}</div>
+                </div>
+            </figcaption>
+        </figure>
+    </FadeInView>
+);
 
+const TestimonialsSection = () => {
   return (
-    <Box sx={{ py: 8, bgcolor: "background.paper" }}>
-      <Container maxWidth="lg">
-        <Typography variant="h2" align="center" gutterBottom>
-          Patient Testimonials
-        </Typography>
-        <Box sx={{ mt: 6 }}>
-          <Slider {...settings}>
-            {testimonials.map((testimonial, index) => (
-              <Box key={index} sx={{ px: 2 }}>
-                <Card
-                  sx={{
-                    height: "100%",
-                    display: "flex",
-                    flexDirection: "column",
-                  }}
-                >
-                  <CardContent>
-                    <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
-                      <Avatar src={testimonial.image} alt={testimonial.name} />
-                      <Box sx={{ ml: 2 }}>
-                        <Typography variant="h6">{testimonial.name}</Typography>
-                        <Rating
-                          value={testimonial.rating}
-                          readOnly
-                          size="small"
-                        />
-                      </Box>
-                    </Box>
-                    <Typography variant="body1" color="text.secondary">
-                      "{testimonial.comment}"
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </Box>
-            ))}
-          </Slider>
-        </Box>
-      </Container>
-    </Box>
+    <section className="bg-neutral-50 py-24 sm:py-32">
+      <div className="container mx-auto px-6 lg:px-8">
+        <FadeInView>
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Changing Lives, One Patient at a Time
+            </h2>
+          </div>
+        </FadeInView>
+
+        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+          {testimonials.map((testimonial, index) => (
+            <TestimonialCard key={index} testimonial={testimonial} delay={index * 0.1} />
+          ))}
+        </div>
+      </div>
+    </section>
   );
-}
+};
+
+export default TestimonialsSection;
