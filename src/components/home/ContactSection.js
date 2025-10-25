@@ -1,4 +1,12 @@
-import { Box, Container, Grid, Typography, Paper, Stack } from "@mui/material";
+import {
+  Box,
+  Container,
+  Grid,
+  Typography,
+  Paper,
+  Stack,
+  Button,
+} from "@mui/material";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneIcon from "@mui/icons-material/Phone";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
@@ -11,8 +19,8 @@ export default function ContactSection() {
           Visit Our Clinics
         </Typography>
 
-        <Grid container spacing={4} sx={{ mt: 4 }}>
-          <Grid item xs={12} md={6}>
+        <Grid container spacing={4} sx={{ mt: 4 }} justifyContent="center">
+          <Grid item xs={12} md={8}>
             <Paper elevation={3} sx={{ p: 4, height: "100%" }}>
               <Typography variant="h5" gutterBottom color="primary">
                 Maksi Clinic
@@ -33,30 +41,17 @@ export default function ContactSection() {
                   <AccessTimeIcon color="primary" />
                   <Typography>Mon - Sat: 10:00 AM - 8:00 PM</Typography>
                 </Box>
-              </Stack>
-            </Paper>
-          </Grid>
-
-          <Grid item xs={12} md={6}>
-            <Paper elevation={3} sx={{ p: 4, height: "100%" }}>
-              <Typography variant="h5" gutterBottom color="primary">
-                Ujjain Clinic
-              </Typography>
-              <Stack spacing={3}>
-                <Box sx={{ display: "flex", gap: 2 }}>
-                  <LocationOnIcon color="primary" />
-                  <Typography>
-                    2, Ashok Nagar, near Loharpatti, Veerbali Hanuman,
-                    Sethinagar, Nanai Road, Freeganj, Ujjain 456001
-                  </Typography>
-                </Box>
-                <Box sx={{ display: "flex", gap: 2 }}>
-                  <PhoneIcon color="primary" />
-                  <Typography>+91 9425049816</Typography>
-                </Box>
-                <Box sx={{ display: "flex", gap: 2 }}>
-                  <AccessTimeIcon color="primary" />
-                  <Typography>Mon - Sat: 10:00 AM - 8:00 PM</Typography>
+                <Box>
+                  <Button
+                    variant="outlined"
+                    color="primary"
+                    startIcon={<LocationOnIcon />}
+                    href="https://www.google.com/maps/search/?api=1&query=In%20front%20of%2096%20shops%2C%20Kanasiya%20Naka%2C%20Maksi%2C%20District%20Shajapur%20(M.P.)%20465106"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View on Map
+                  </Button>
                 </Box>
               </Stack>
             </Paper>

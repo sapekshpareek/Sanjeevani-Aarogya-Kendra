@@ -26,8 +26,13 @@ export default function Sitemap() {
         { title: "Vitiligo Treatment", path: "/services/vitiligo" },
         { title: "Psoriasis Treatment", path: "/services/psoriasis" },
         { title: "Skin Disease Treatment", path: "/services/skin-disease" },
-        { title: "Obesity Management", path: "/services/obesity" },
-        { title: "Women's Health", path: "/services/womens-health" },
+        { title: "Knee & Joint Pain", path: "/services/kneePain" },
+        { title: "Piles (Hemorrhoids)", path: "/services/piles" },
+        { title: "Infertility Treatment", path: "/services/infertility" },
+        {
+          title: "Women's Diseases",
+          path: "/services/womenHealth",
+        },
       ],
     },
     {

@@ -29,7 +29,64 @@ const serviceDetails = {
       "Regular follow-up care",
     ],
   },
-  // Add other services similarly
+  skinDisease: {
+    title: "Skin Disease Treatment",
+    description: "Expert care for various skin conditions and disorders.",
+    image: serviceImages.skinDisease.primary,
+    content: [
+      "Diagnosis and treatment of acne, eczema, and rashes",
+      "Fungal and bacterial infection management",
+      "Allergy testing and treatment",
+      "Personalized skincare routines",
+    ],
+  },
+  kneePain: {
+    title: "Knee and Joint Pain",
+    description:
+      "Effective non-surgical treatment for chronic knee and joint pain.",
+    image: serviceImages.kneePain.primary,
+    content: [
+      "Comprehensive assessment of joint issues",
+      "Pain relief therapies",
+      "Lifestyle and exercise recommendations",
+      "Management of arthritis and other joint disorders",
+    ],
+  },
+  piles: {
+    title: "Piles (Hemorrhoids) Treatment",
+    description: "Advanced and non-invasive treatment for piles and fissures.",
+    image: serviceImages.piles.primary,
+    content: [
+      "Consultation and diagnosis",
+      "Medication and dietary advice",
+      "Minimally invasive procedures",
+      "Post-treatment care and prevention tips",
+    ],
+  },
+  infertility: {
+    title: "Infertility Treatment",
+    description:
+      "Comprehensive care and treatment for male and female infertility issues.",
+    image: serviceImages.infertility.primary,
+    content: [
+      "Detailed fertility assessment for couples",
+      "Hormonal treatments and ovulation induction",
+      "Guidance on lifestyle and nutritional factors",
+      "Supportive care throughout the treatment process",
+    ],
+  },
+  womenHealth: {
+    title: "Women’s Diseases (Gynecological Disorders)",
+    description:
+      "Specialized care for a range of gynecological disorders and women's health issues.",
+    image: serviceImages.womenHealth.primary,
+    content: [
+      "Diagnosis and treatment of common gynecological problems",
+      "Management of menstrual disorders",
+      "Preventive care and health check-ups",
+      "Confidential and compassionate consultations",
+    ],
+  },
 };
 
 export default function ServiceDetail() {
@@ -81,4 +138,23 @@ export default function ServiceDetail() {
       </Container>
     </Box>
   );
+}
+
+export async function getStaticPaths() {
+  const paths = Object.keys(serviceDetails).map((id) => ({
+    params: { id },
+  }));
+
+  return {
+    paths,
+    fallback: false, // can also be true or 'blocking'
+  };
+}
+
+export async function getStaticProps({ params }) {
+  return {
+    props: {
+      id: params.id,
+    },
+  };
 }

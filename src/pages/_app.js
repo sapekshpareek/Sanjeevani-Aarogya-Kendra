@@ -1,10 +1,17 @@
-import { useEffect } from "react";
-import { preloadCriticalImages } from "../utils/imagePreloader";
+import MainLayout from "../components/layout/MainLayout";
+import SEO from "../components/SEO";
 
-export default function App({ Component, pageProps }) {
-  useEffect(() => {
-    preloadCriticalImages();
-  }, []);
-
-  return <Component {...pageProps} />;
+function App({ Component, pageProps }) {
+  return (
+    <>
+      {/* SEO component for default head tags */}
+      <SEO />
+      {/* MainLayout provides Navbar, Footer, and Theme */}
+      <MainLayout>
+        <Component {...pageProps} />
+      </MainLayout>
+    </>
+  );
 }
+
+export default App;

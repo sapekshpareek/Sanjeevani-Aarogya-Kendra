@@ -21,16 +21,27 @@ const services = [
     description: "Expert care for various skin conditions and disorders.",
   },
   {
-    id: "obesity",
-    title: "Obesity Management",
+    id: "kneePain",
+    title: "Knee and Joint Pain",
     description:
-      "Personalized weight management programs for sustainable results.",
+      "Effective treatment for chronic knee and joint pain without surgery.",
+  },
+  {
+    id: "piles",
+    title: "Piles (Hemorrhoids)",
+    description: "Advanced and non-invasive treatment for piles and fissures.",
+  },
+  {
+    id: "infertility",
+    title: "Infertility Treatment",
+    description:
+      "Comprehensive care and treatment for male and female infertility issues.",
   },
   {
     id: "womenHealth",
-    title: "Women's Health",
+    title: "Women’s Diseases (Gynecological)",
     description:
-      "Specialized care for female infertility and gynecological issues.",
+      "Specialized care for a range of gynecological disorders and women's health issues.",
   },
 ];
 

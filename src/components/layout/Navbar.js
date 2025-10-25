@@ -19,14 +19,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-const navItems = [
-  { label: "Home", path: "/" },
-  { label: "About Us", path: "/about" },
-  { label: "Services", path: "/services" },
-  { label: "Reviews", path: "/reviews" },
-  { label: "Contact", path: "/contact" },
-];
-
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const theme = useTheme();
@@ -36,6 +28,14 @@ export default function Navbar() {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
+
+  const navItems = [
+    { label: "Home", path: "/" },
+    { label: "About Us", path: "/about" },
+    { label: "Services", path: "/services" },
+    { label: "Reviews", path: "/reviews" },
+    { label: "Contact", path: "/contact" },
+  ];
 
   return (
     <AppBar position="sticky" color="default" elevation={1}>

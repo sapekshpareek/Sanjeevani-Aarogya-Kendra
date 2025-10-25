@@ -38,12 +38,6 @@ export default function Footer() {
                   (M.P.) 465106
                 </Typography>
               </Box>
-              <Box sx={{ display: "flex", gap: 1 }}>
-                <LocationOnIcon />
-                <Typography variant="body2">
-                  2, Ashok Nagar, near Loharpatti, Ujjain 456001
-                </Typography>
-              </Box>
             </Stack>
           </Grid>
 
@@ -59,14 +53,6 @@ export default function Footer() {
               >
                 <PhoneIcon />
                 <Typography>+91 91311 70076</Typography>
-              </Link>
-              <Link
-                href="tel:+919425049816"
-                color="inherit"
-                sx={{ display: "flex", gap: 1 }}
-              >
-                <PhoneIcon />
-                <Typography>+91 9425049816</Typography>
               </Link>
               <Link
                 href="tel:+917000563123"

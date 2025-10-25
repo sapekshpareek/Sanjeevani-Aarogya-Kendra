@@ -17,9 +17,9 @@ export default function AboutPage() {
               expertise in dermatology and general healthcare.
             </Typography>
             <Typography variant="body1" paragraph>
-              Our state-of-the-art facilities in Maksi and Ujjain are equipped
-              with modern medical technology, allowing us to provide the highest
-              standard of care to our patients.
+              Our state-of-the-art facility in Maksi is equipped with modern
+              medical technology, allowing us to provide the highest standard of
+              care to our patients.
             </Typography>
             <Typography variant="h6" sx={{ mt: 4, mb: 2 }}>
               Our Mission

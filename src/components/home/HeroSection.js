@@ -6,8 +6,9 @@ export default function HeroSection() {
     <Box
       sx={{
         position: "relative",
-        color: "white",
-        py: { xs: 8, md: 12 },
+        width: "100%",
+        minHeight: { xs: "100vh", md: "93vh" },
+        display: "flex",
         "&::before": {
           content: '""',
           position: "absolute",
@@ -23,7 +24,16 @@ export default function HeroSection() {
         },
       }}
     >
-      <Container maxWidth="lg">
+      <Container
+        maxWidth="lg"
+        sx={{
+          position: "relative",
+          zIndex: 1,
+          margin: "auto",
+          color: "white",
+          py: { xs: 8, md: 12 },
+        }}
+      >
         <Box
           sx={{
             display: "flex",

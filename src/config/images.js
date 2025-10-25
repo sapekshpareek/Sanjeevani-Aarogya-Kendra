@@ -30,17 +30,29 @@ export const serviceImages = {
     fallback:
       "https://images.unsplash.com/photo-1579684453423-f84349ef60b0?auto=format&fit=crop&q=80",
   },
+  kneePain: {
+    primary:
+      "https://images.unsplash.com/photo-1599059818043-a3d4f079833a?auto=format&fit=crop&q=80",
+    fallback:
+      "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80",
+  },
   skinDisease: {
     primary:
       "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80",
     fallback:
       "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80",
   },
-  obesity: {
+  piles: {
     primary:
-      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1619450538668-e2a75131333a?auto=format&fit=crop&q=80",
     fallback:
-      "https://images.unsplash.com/photo-1579684453423-f84349ef60b0?auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80",
+  },
+  infertility: {
+    primary:
+      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80",
+    fallback:
+      "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80",
   },
   womenHealth: {
     primary:

@@ -69,7 +69,7 @@ export default function ContactPage() {
           <Grid item xs={12} md={6}>
             <Paper elevation={3} sx={{ p: 4, height: "100%" }}>
               <Typography variant="h5" gutterBottom>
-                Our Locations
+                Our Location
               </Typography>
               <Box sx={{ mt: 3 }}>
                 <Typography variant="h6" color="primary" gutterBottom>
@@ -82,19 +82,17 @@ export default function ContactPage() {
                     Shajapur (M.P.) 465106
                   </Typography>
                 </Box>
-                <Typography
-                  variant="h6"
-                  color="primary"
-                  gutterBottom
-                  sx={{ mt: 4 }}
-                >
-                  Ujjain Clinic
-                </Typography>
-                <Box sx={{ display: "flex", gap: 2 }}>
-                  <LocationOnIcon color="primary" />
-                  <Typography>
-                    2, Ashok Nagar, near Loharpatti, Ujjain 456001
-                  </Typography>
+                <Box sx={{ mt: 3 }}>
+                  <Button
+                    variant="outlined"
+                    color="primary"
+                    startIcon={<LocationOnIcon />}
+                    href="https://www.google.com/maps/search/?api=1&query=In%20front%20of%2096%20shops%2C%20Kanasiya%20Naka%2C%20Maksi%2C%20District%20Shajapur%20(M.P.)%20465106"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View on Map
+                  </Button>
                 </Box>
               </Box>
             </Paper>
