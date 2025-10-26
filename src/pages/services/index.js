@@ -16,7 +16,7 @@ const services = [
     id: "psoriasis",
     title: "Psoriasis Treatment",
     description: "Effective management and treatment of psoriasis symptoms.",
-    image: "/images/services/psoriasis.jpg",
+    image: "/images/services/psoriasis.png",
     details: "Advanced psoriasis care with personalized treatment plans...",
   },
   // Add other services similarly

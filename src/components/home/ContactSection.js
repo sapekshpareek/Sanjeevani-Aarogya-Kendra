@@ -1,8 +1,12 @@
-import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import FadeInView from '../animations/FadeInView';
-import { PhoneIcon, EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/outline';
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import FadeInView from "../animations/FadeInView";
+import {
+  PhoneIcon,
+  EnvelopeIcon,
+  MapPinIcon,
+} from "@heroicons/react/24/outline";
 
 const ContactSection = () => {
   return (
@@ -11,12 +15,21 @@ const ContactSection = () => {
         <div className="grid grid-cols-1 gap-16 items-center lg:grid-cols-2">
           <FadeInView>
             <div className="relative h-96 w-full rounded-lg overflow-hidden shadow-xl">
-              <Image
+              {/* <Image
                 src="/images/clinic.jpg"
                 alt="Clinic Location"
                 layout="fill"
                 objectFit="cover"
-              />
+              /> */}
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d836.4598653835177!2d76.15126536065206!3d23.28273945802301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396343b46d1e865b%3A0x2e22cc5ecf769879!2sAashapura%20Footwear!5e1!3m2!1sen!2sin!4v1761480115887!5m2!1sen!2sin"
+                width="600"
+                height="450"
+                style={{ border: 0 }}
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </FadeInView>
 
@@ -26,24 +39,41 @@ const ContactSection = () => {
                 Begin Your Journey to Clear Skin
               </h2>
               <p className="mt-6 text-lg leading-8 text-gray-700">
-                Take the first step towards the results you deserve. Contact us to schedule your private consultation with Dr. Pandey.
+                Take the first step towards the results you deserve. Contact us
+                to schedule your private consultation with Dr. Pandey.
               </p>
               <div className="mt-10 space-y-6">
                 <div className="flex items-center gap-4">
                   <MapPinIcon className="h-6 w-6 text-teal-500" />
-                  <span className="text-gray-700">123 Health St, Wellness City, 45678</span>
+                  <span className="text-gray-700">
+                    In Front of 96 Shop, Kanasiya Naka, Maksi, Madhya Pradesh -
+                    465106
+                  </span>
                 </div>
                 <div className="flex items-center gap-4">
                   <PhoneIcon className="h-6 w-6 text-teal-500" />
-                  <a href="tel:+1234567890" className="text-gray-700 hover:text-teal-500">+1 (234) 567-890</a>
+                  <a
+                    href="tel:+919993349816, +919131170076"
+                    className="text-gray-700 hover:text-teal-500"
+                  >
+                    +91 9993349816, +91 9131170076
+                  </a>
                 </div>
                 <div className="flex items-center gap-4">
                   <EnvelopeIcon className="h-6 w-6 text-teal-500" />
-                  <a href="mailto:consult@drpandey.com" className="text-gray-700 hover:text-teal-500">consult@drpandey.com</a>
+                  <a
+                    href="mailto:sanjeevaniarogyakendra@gmail.com"
+                    className="text-gray-700 hover:text-teal-500"
+                  >
+                    sanjeevaniarogyakendra@gmail.com
+                  </a>
                 </div>
               </div>
               <div className="mt-10">
-                <Link href="/contact" className="rounded-md bg-teal-400 px-5 py-3 text-base font-semibold text-gray-900 shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 transition-colors">
+                <Link
+                  href="/contact"
+                  className="rounded-md bg-teal-400 px-5 py-3 text-base font-semibold text-gray-900 shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 transition-colors"
+                >
                   Book a Consultation Online
                 </Link>
               </div>
