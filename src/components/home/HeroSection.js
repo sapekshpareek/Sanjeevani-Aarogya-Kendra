@@ -44,7 +44,7 @@ const HeroSection = () => {
             <FadeInView delay={0.3}>
               <div className="relative h-96 w-96 overflow-hidden rounded-lg shadow-xl lg:h-[28rem] lg:w-[28rem]">
                 <Image
-                  src="/images/hero2.jpg"
+                  src="https://res.cloudinary.com/daw4ojh5s/image/upload/v1761501902/HERO2_rz8cng.jpg"
                   alt="Dr. Ravi Pandey - Dermatology Expert"
                   fill
                   style={{ objectFit: "cover" }}
