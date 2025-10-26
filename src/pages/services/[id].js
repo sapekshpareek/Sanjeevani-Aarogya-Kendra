@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { Box, Container, Typography, Grid, Paper } from "@mui/material";
 import Image from "next/image";
 import { serviceImages } from "../../config/images";
+import SEO from "@/components/SEO";
 
 const serviceDetails = {
   vitiligo: {
@@ -100,6 +101,11 @@ export default function ServiceDetail() {
 
   return (
     <Box sx={{ py: 8 }}>
+      <SEO
+        title={`${service.title} | Sanjeevani Aarogya Kendra`}
+        description={service.description}
+        canonical={process.env.NEXT_PUBLIC_SITE_URL ? `${process.env.NEXT_PUBLIC_SITE_URL}/services/${id}` : undefined}
+      />
       <Container maxWidth="lg">
         <Grid container spacing={6}>
           <Grid item xs={12} md={6}>

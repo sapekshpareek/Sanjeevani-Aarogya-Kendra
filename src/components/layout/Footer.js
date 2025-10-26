@@ -21,7 +21,7 @@ export default function Footer() {
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="container mx-auto px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+      <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-20 lg:px-8 lg:py-24 xl:py-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
             <Link href="/" className="flex items-center gap-2">
@@ -32,7 +32,7 @@ export default function Footer() {
                 width={40}
                 height={40}
               />
-              <span className="font-bold text-2xl text-white">
+              <span className="font-bold text-xl sm:text-2xl text-white">
                 Sanjeevani Aarogya Kendra
               </span>
             </Link>
@@ -41,7 +41,7 @@ export default function Footer() {
             </p>
             {/* Social media links can go here */}
           </div>
-          <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+          <div className="mt-10 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h3 className="text-sm font-semibold leading-6 text-white">
@@ -50,12 +50,12 @@ export default function Footer() {
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.solutions.map((item) => (
                     <li key={item.name}>
-                      <a
+                      <Link
                         href={item.href}
                         className="text-sm leading-6 text-gray-300 hover:text-teal-400"
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -89,14 +89,28 @@ export default function Footer() {
                     465106
                   </p>
                   <p>
-                    <a href="tel:+919993349816" className="hover:text-teal-400">
-                      +91 9993349816, +91 9131170076
+                    <a
+                      href="tel:+919993349816"
+                      className="hover:text-teal-400"
+                      aria-label="Call +91 9993349816"
+                    >
+                      +91 9993349816
+                    </a>
+                  </p>
+                  <p>
+                    <a
+                      href="tel:+919131170076"
+                      className="hover:text-teal-400"
+                      aria-label="Call +91 9131170076"
+                    >
+                      +91 9131170076
                     </a>
                   </p>
                   <p>
                     <a
                       href="mailto:sanjeevaniarogyakendra@gmail.com"
                       className="hover:text-teal-400"
+                      aria-label="Email sanjeevaniarogyakendra@gmail.com"
                     >
                       sanjeevaniarogyakendra@gmail.com
                     </a>
@@ -106,7 +120,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
+        <div className="mt-12 sm:mt-16 lg:mt-20 border-t border-white/10 pt-8">
           <p className="text-xs leading-5 text-gray-400">
             &copy; {new Date().getFullYear()} Dr. Ravi Pandey. All rights
             reserved.

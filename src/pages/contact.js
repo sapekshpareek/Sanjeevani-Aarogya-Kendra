@@ -30,7 +30,8 @@ export default function ContactPage() {
     <>
       <SEO
         title="Contact Us | Schedule a Consultation"
-        description="Contact Dr. Ravi Pandey's clinic to schedule your consultation for expert dermatological care."
+        description="Contact Sanjeevani Aarogya Kendra to schedule your consultation with Dr. Ravi Pandey—expert dermatology in Maksi, Ujjain, Indore, Dewas & Shajapur."
+        canonical={process.env.NEXT_PUBLIC_SITE_URL ? `${process.env.NEXT_PUBLIC_SITE_URL}/contact` : undefined}
       />
       <div className="relative bg-white">
         <div className="absolute inset-0">

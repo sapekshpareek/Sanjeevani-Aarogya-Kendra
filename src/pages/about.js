@@ -7,7 +7,8 @@ export default function About() {
     <>
       <SEO
         title="About Us | Dr. Ravi Pandey Dermatology"
-        description="Learn about Dr. Ravi Pandey's commitment to decisive, compassionate care for complex skin conditions like Vitiligo and Melasma."
+        description="Learn about Dr. Ravi Pandey and Sanjeevani Aarogya Kendra—decisive, compassionate dermatology in Maksi, Ujjain, Indore, Dewas & Shajapur."
+        canonical={process.env.NEXT_PUBLIC_SITE_URL ? `${process.env.NEXT_PUBLIC_SITE_URL}/about` : undefined}
       />
       <AboutPage />
     </>
