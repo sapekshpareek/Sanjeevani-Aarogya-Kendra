@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
 const WhatsAppButton = () => {
-  const phoneNumber = "1234567890"; // Replace with actual number
+  const phoneNumber = "+919131170076"; // Replace with actual number
   const message = "Hello, I'm interested in a consultation."; // Optional pre-filled message
 
   return (

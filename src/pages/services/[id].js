@@ -128,9 +128,8 @@ export default function ServiceDetail() {
               <Image
                 src={service.image}
                 alt={service.title}
-                layout="fill"
-                objectFit="cover"
-                style={{ borderRadius: "8px" }}
+                fill
+                style={{ objectFit: "cover", borderRadius: "8px" }}
               />
             </Paper>
           </Grid>

@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import MainLayout from "../components/layout/MainLayout";
 import SEO from "../components/SEO";
+import { appWithTranslation } from "next-i18next";
 
 function App({ Component, pageProps }) {
   return (
@@ -15,4 +16,4 @@ function App({ Component, pageProps }) {
   );
 }
 
-export default App;
+export default appWithTranslation(App);

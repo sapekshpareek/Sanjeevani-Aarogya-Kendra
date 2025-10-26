@@ -1,10 +1,11 @@
-import SEO from '@/components/SEO';
-import HeroSection from '@/components/home/HeroSection';
-import ResultsSection from '@/components/home/ResultsSection';
-import ExpertiseSection from '@/components/home/ExpertiseSection';
-import ServicesSection from '@/components/home/ServicesSection';
-import TestimonialsSection from '@/components/home/TestimonialsSection';
-import ContactSection from '@/components/home/ContactSection';
+import SEO from "@/components/SEO";
+import HeroSection from "@/components/home/HeroSection";
+import ResultsSection from "@/components/home/ResultsSection";
+import ExpertiseSection from "@/components/home/ExpertiseSection";
+import ServicesSection from "@/components/home/ServicesSection";
+import TestimonialsSection from "@/components/home/TestimonialsSection";
+import ContactSection from "@/components/home/ContactSection";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export default function HomePage() {
   return (
@@ -21,4 +22,12 @@ export default function HomePage() {
       <ContactSection />
     </>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
 }
