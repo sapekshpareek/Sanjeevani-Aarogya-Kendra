@@ -14,6 +14,7 @@ const ContactSection = () => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-16 items-center lg:grid-cols-2">
           <FadeInView>
+<<<<<<< HEAD
             <div className="relative h-96 w-full rounded-lg overflow-hidden shadow-xl">
               {/* <Image
                 src="/images/clinic.jpg"
@@ -25,10 +26,30 @@ const ContactSection = () => {
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d836.4598653835177!2d76.15126536065206!3d23.28273945802301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396343b46d1e865b%3A0x2e22cc5ecf769879!2sAashapura%20Footwear!5e1!3m2!1sen!2sin!4v1761480115887!5m2!1sen!2sin"
                 width="600"
                 height="450"
+=======
+            <div className="relative h-96 w-full rounded-lg overflow-hidden shadow-xl lg:h-[30rem]">
+              {/* <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.971291884144!2d76.2729449751011!3d23.18183197906956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3963a918a5555555%3A0x8577717f910a300!2sSanjeevani%20Arogya%20Kendra!5e0!3m2!1sen!2sin!4v1717678835158!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe> */}
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1058.58132543143!2d76.15104648651814!3d23.280784688906387!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396343859938df5d%3A0xbd51de4967db229a!2sChoudhary%20Motors%20Maksi!5e0!3m2!1sen!2sin!4v1761473760921!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+>>>>>>> 62b2f899d10dfea855abc97411fc1999da10c8b6
                 style={{ border: 0 }}
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
+<<<<<<< HEAD
+=======
+                title="Sanjeevani Arogya Kendra Location"
+>>>>>>> 62b2f899d10dfea855abc97411fc1999da10c8b6
               ></iframe>
             </div>
           </FadeInView>
@@ -46,17 +67,29 @@ const ContactSection = () => {
                 <div className="flex items-center gap-4">
                   <MapPinIcon className="h-6 w-6 text-teal-500" />
                   <span className="text-gray-700">
+<<<<<<< HEAD
                     In Front of 96 Shop, Kanasiya Naka, Maksi, Madhya Pradesh -
                     465106
+=======
+                    In Front of 96 Dukan, Kanasiya Naka, Sanjeevani Arogya
+                    Kendra, Maksi Dist. Shajapur 465106
+>>>>>>> 62b2f899d10dfea855abc97411fc1999da10c8b6
                   </span>
                 </div>
                 <div className="flex items-center gap-4">
                   <PhoneIcon className="h-6 w-6 text-teal-500" />
                   <a
+<<<<<<< HEAD
                     href="tel:+919993349816, +919131170076"
                     className="text-gray-700 hover:text-teal-500"
                   >
                     +91 9993349816, +91 9131170076
+=======
+                    href="tel:+919993349816"
+                    className="text-gray-700 hover:text-teal-500"
+                  >
+                    +919993349816, +919131170076
+>>>>>>> 62b2f899d10dfea855abc97411fc1999da10c8b6
                   </a>
                 </div>
                 <div className="flex items-center gap-4">
@@ -65,7 +98,11 @@ const ContactSection = () => {
                     href="mailto:sanjeevaniarogyakendra@gmail.com"
                     className="text-gray-700 hover:text-teal-500"
                   >
+<<<<<<< HEAD
                     sanjeevaniarogyakendra@gmail.com
+=======
+                    s anjeevaniarogyakendra@gmail.com
+>>>>>>> 62b2f899d10dfea855abc97411fc1999da10c8b6
                   </a>
                 </div>
               </div>

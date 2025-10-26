@@ -1,7 +1,7 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import FadeInView from '../animations/FadeInView';
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import FadeInView from "../animations/FadeInView";
 
 const HeroSection = () => {
   return (
@@ -16,15 +16,25 @@ const HeroSection = () => {
             </FadeInView>
             <FadeInView delay={0.1}>
               <p className="mt-6 text-lg leading-8 text-gray-700">
-                Board-Certified Dermatology for Complex Cases. We deliver the stunning, lasting results others couldn't—because your skin deserves <span className="text-teal-500 font-semibold">decisive</span> expertise.
+                Board-Certified Dermatology for Complex Cases. We deliver the
+                stunning, lasting results others couldn't—because your skin
+                deserves{" "}
+                <span className="text-teal-500 font-semibold">decisive</span>{" "}
+                expertise.
               </p>
             </FadeInView>
             <FadeInView delay={0.2}>
               <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
-                <Link href="#results" className="rounded-md bg-teal-400 px-4 py-3 text-sm font-semibold text-gray-900 shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 transition-colors">
+                <Link
+                  href="#results"
+                  className="rounded-md bg-teal-400 px-4 py-3 text-sm font-semibold text-gray-900 shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 transition-colors"
+                >
                   See Our Transformations
                 </Link>
-                <Link href="/contact" className="text-sm font-semibold leading-6 text-gray-900 hover:text-gray-700">
+                <Link
+                  href="/contact"
+                  className="text-sm font-semibold leading-6 text-gray-900 hover:text-gray-700"
+                >
                   Book Consultation <span aria-hidden="true">→</span>
                 </Link>
               </div>
@@ -36,8 +46,8 @@ const HeroSection = () => {
                 <Image
                   src="/images/hero2.jpg"
                   alt="Dr. Ravi Pandey - Dermatology Expert"
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  style={{ objectFit: "cover" }}
                   background="black"
                   className="transition-transform duration-500 group-hover:scale-105"
                   priority

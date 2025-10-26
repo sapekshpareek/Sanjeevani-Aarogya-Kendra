@@ -4,8 +4,13 @@ import Image from "next/image";
 
 const navigation = {
   solutions: [
+<<<<<<< HEAD
     { name: "Results", href: "/#results" },
     { name: "Services", href: "/services" },
+=======
+    { name: "Results", href: "#results" },
+    { name: "Services", href: "#services" },
+>>>>>>> 62b2f899d10dfea855abc97411fc1999da10c8b6
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ],
@@ -85,17 +90,33 @@ export default function Footer() {
                 </h3>
                 <div className="mt-6 space-y-4 text-sm text-gray-300">
                   <p>
+<<<<<<< HEAD
                     In Front of 96 Shop, Kanasiya Naka, Maksi, Madhya Pradesh -
                     465106
                   </p>
                   <p>
                     <a href="tel:+919993349816" className="hover:text-teal-400">
                       +91 9993349816, +91 9131170076
+=======
+                    In Front of 96 Dukan, Kanasiya Naka, Sanjeevani Arogya
+                    Kendra, Maksi Dist. Shajapur 465106
+                  </p>
+                  <p>
+                    <a
+                      href="tel: +919993349816, +919131170076"
+                      className="hover:text-teal-400"
+                    >
+                      +919993349816, +919131170076
+>>>>>>> 62b2f899d10dfea855abc97411fc1999da10c8b6
                     </a>
                   </p>
                   <p>
                     <a
+<<<<<<< HEAD
                       href="mailto:sanjeevaniarogyakendra@gmail.com"
+=======
+                      href="mailto: Sanjeevaniarogyakendra@gmail.com"
+>>>>>>> 62b2f899d10dfea855abc97411fc1999da10c8b6
                       className="hover:text-teal-400"
                     >
                       sanjeevaniarogyakendra@gmail.com
@@ -111,6 +132,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Dr. Ravi Pandey. All rights
             reserved.
           </p>
+<<<<<<< HEAD
           <div className="mt-4">
             <p className="text-xs leading-5 text-gray-400 flex items-center gap-2">
               <span>Crafted with</span>
@@ -120,6 +142,8 @@ export default function Footer() {
               <span>by Stromborn Softwares</span>
             </p>
           </div>
+=======
+>>>>>>> 62b2f899d10dfea855abc97411fc1999da10c8b6
         </div>
       </div>
     </footer>
