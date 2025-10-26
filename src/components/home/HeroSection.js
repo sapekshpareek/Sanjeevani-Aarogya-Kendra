@@ -48,7 +48,6 @@ const HeroSection = () => {
                   alt="Dr. Ravi Pandey - Dermatology Expert"
                   fill
                   style={{ objectFit: "cover" }}
-                  background="black"
                   className="transition-transform duration-500 group-hover:scale-105"
                   priority
                 />

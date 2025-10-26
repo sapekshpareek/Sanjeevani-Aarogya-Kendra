@@ -5,11 +5,7 @@ import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
-<<<<<<< HEAD
   { name: "Results", href: "/#results" },
-=======
-  { name: "Results", href: "#results" },
->>>>>>> 62b2f899d10dfea855abc97411fc1999da10c8b6
   { name: "Services", href: "/services" },
   { name: "About", href: "/about" },
 ];

@@ -27,11 +27,7 @@ const services = [
   },
   {
     id: "womens-health",
-<<<<<<< HEAD
     name: "Women's Dermatological Health",
-=======
-    name: "Female Infertility Care",
->>>>>>> 62b2f899d10dfea855abc97411fc1999da10c8b6
     description:
       "Specialized care for skin conditions related to hormonal changes, pregnancy, and women's health.",
     imageUrl: "/images/services/womens-health.jpg",

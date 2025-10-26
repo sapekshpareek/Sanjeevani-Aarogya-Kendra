@@ -13,22 +13,14 @@ const testimonials = [
   {
     quote:
       "The care and attention to detail here are unmatched. My complex skin condition is finally under control. I couldn't be more grateful.",
-<<<<<<< HEAD
-    name: "Laxmi Kumari",
-=======
     name: "Fhool Kuwar Bai",
->>>>>>> 62b2f899d10dfea855abc97411fc1999da10c8b6
     imageUrl: "/images/testimonials/patient2.jpg",
     condition: "Pigment Correction Patient",
   },
   {
     quote:
       "I had a rare condition that other doctors dismissed. Dr. Pandey not only diagnosed it correctly but created a treatment that worked. Truly life-changing.",
-<<<<<<< HEAD
-    name: "Fhool Kuwar Bai",
-=======
     name: "Laxmi Kumari",
->>>>>>> 62b2f899d10dfea855abc97411fc1999da10c8b6
     imageUrl: "/images/testimonials/patient3.jpg",
     condition: "Rare Disorder Patient",
   },
@@ -45,13 +37,8 @@ const TestimonialCard = ({ testimonial, delay }) => (
           <Image
             src={testimonial.imageUrl}
             alt={testimonial.name}
-<<<<<<< HEAD
-            layout="fill"
-            objectFit="cover"
-=======
             fill
             style={{ objectFit: "cover" }}
->>>>>>> 62b2f899d10dfea855abc97411fc1999da10c8b6
           />
         </div>
         <div>

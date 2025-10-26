@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import MainLayout from "@/components/layout/MainLayout";
-=======
->>>>>>> 62b2f899d10dfea855abc97411fc1999da10c8b6
 import SEO from "@/components/SEO";
 import {
   PhoneIcon,
@@ -59,13 +55,8 @@ export default function ContactPage() {
                       aria-hidden="true"
                     />
                     <span className="ml-3">
-<<<<<<< HEAD
                       In Front of 96 Shop, Kanasiya Naka, Maksi, Madhya Pradesh
                       - 465106
-=======
-                      In front of 96 dukan, Kanasiya Naka, Sanjeevani Arogya
-                      Kendra, Maksi Dist. Shajapur 465106
->>>>>>> 62b2f899d10dfea855abc97411fc1999da10c8b6
                     </span>
                   </dd>
                 </div>
@@ -76,11 +67,7 @@ export default function ContactPage() {
                       className="h-6 w-6 flex-shrink-0 text-gray-400"
                       aria-hidden="true"
                     />
-<<<<<<< HEAD
                     <span className="ml-3">+91 9993349816, +91 9131170076</span>
-=======
-                    <span className="ml-3">+919993349816, +919131170076</span>
->>>>>>> 62b2f899d10dfea855abc97411fc1999da10c8b6
                   </dd>
                 </div>
                 <div className="mt-3">
@@ -91,11 +78,7 @@ export default function ContactPage() {
                       aria-hidden="true"
                     />
                     <span className="ml-3">
-<<<<<<< HEAD
                       sanjeevaniarogyakendra@gmail.com
-=======
-                      Sanjeevaniarogyakendra@gmail.com
->>>>>>> 62b2f899d10dfea855abc97411fc1999da10c8b6
                     </span>
                   </dd>
                 </div>
