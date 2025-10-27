@@ -1,6 +1,5 @@
 import { Box, Container, Typography, Grid } from "@mui/material";
 import ServiceCard from "../../components/services/ServiceCard";
-import { serviceImages } from "../../config/images";
 
 const services = [
   {
@@ -19,7 +18,34 @@ const services = [
     image: "/images/services/psoriasis.png",
     details: "Advanced psoriasis care with personalized treatment plans...",
   },
-  // Add other services similarly
+  {
+    id: "skin-disease",
+    title: "General Skin Diseases",
+    description:
+      "Expert diagnosis and treatment for a wide range of common and complex skin conditions.",
+    image: "/images/services/skin-disease.jpg",
+  },
+  {
+    id: "kneePain",
+    title: "Knee & Joint Pain",
+    description:
+      "Effective non-surgical treatment for chronic knee and joint pain, improving mobility and comfort.",
+    image: "/images/services/knee.jpg",
+  },
+  {
+    id: "piles",
+    title: "Piles (Hemorrhoids)",
+    description:
+      "Advanced and non-invasive treatment options for piles and fissures, ensuring relief and recovery.",
+    image: "/images/services/piles.jpg",
+  },
+  {
+    id: "infertility",
+    title: "Infertility Treatment",
+    description:
+      "Comprehensive care and treatment for male and female infertility issues, guiding you towards parenthood.",
+    image: "/images/services/womens-health.jpg",
+  },
 ];
 
 export default function ServicesPage() {

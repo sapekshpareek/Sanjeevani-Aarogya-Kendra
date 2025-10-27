@@ -16,7 +16,7 @@ const ContactSection = () => {
           <FadeInView>
             <div className="relative h-96 w-full rounded-lg overflow-hidden shadow-xl lg:h-[30rem]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1058.58132543143!2d76.15104648651814!3d23.280784688906387!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396343859938df5d%3A0xbd51de4967db229a!2sChoudhary%20Motors%20Maksi!5e0!3m2!1sen!2sin!4v1761473760921!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3755.588320183936!2d76.1515162!3d23.282366099999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396343215e9fafef%3A0x906b6004343f58de!2sSanjeevani%20Arogya%20Kendra!5e1!3m2!1sen!2sin!4v1761561385491!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
