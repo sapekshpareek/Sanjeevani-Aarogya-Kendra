@@ -114,7 +114,7 @@ const ResultsSection = () => {
               href="/contact"
               className="rounded-md bg-teal-400 px-5 py-3 text-base font-semibold text-gray-900 shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 transition-colors"
             >
-              Ready for your transformation? Schedule a Consultation
+              Ready for your transformation?
             </Link>
           </div>
         </FadeInView>

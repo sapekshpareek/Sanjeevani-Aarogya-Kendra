@@ -17,6 +17,7 @@ export default function Sitemap() {
         { title: "Home", path: "/" },
         { title: "About Us", path: "/about" },
         { title: "Services", path: "/services" },
+        { title: "Result", path: "/result" },
         { title: "Contact", path: "/contact" },
       ],
     },
