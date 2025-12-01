@@ -23,7 +23,7 @@ export default function ContactPage() {
     e.preventDefault();
     // Build WhatsApp message and open WhatsApp chat with clinic number
     const { name, email, phone, message } = formState;
-    const clinicPhone = "919993349816"; // clinic number (country code +91, no plus sign)
+    const clinicPhone = "919131170076"; // clinic number (country code +91, no plus sign)
     const text = `New appointment request from website:\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`;
     const waUrl = `https://api.whatsapp.com/send?phone=${clinicPhone}&text=${encodeURIComponent(
       text
