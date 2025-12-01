@@ -21,8 +21,17 @@ export default function ContactPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here (e.g., send to an API endpoint)
-    console.log("Form submitted:", formState);
+    // Build WhatsApp message and open WhatsApp chat with clinic number
+    const { name, email, phone, message } = formState;
+    const clinicPhone = "919993349816"; // clinic number (country code +91, no plus sign)
+    const text = `New appointment request from website:\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`;
+    const waUrl = `https://api.whatsapp.com/send?phone=${clinicPhone}&text=${encodeURIComponent(
+      text
+    )}`;
+    // open in a new tab (user will be taken to WhatsApp Web or app on mobile)
+    if (typeof window !== "undefined") {
+      window.open(waUrl, "_blank");
+    }
     setIsSubmitted(true);
   };
 
@@ -174,8 +183,11 @@ export default function ContactPage() {
                   <div>
                     <button
                       type="submit"
-                      className="inline-flex justify-center rounded-md border border-transparent bg-teal-400 py-3 px-6 text-base font-medium text-gray-900 shadow-sm hover:bg-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
+                      className="inline-flex items-center justify-center gap-2 rounded-md border border-transparent bg-teal-400 py-3 px-6 text-base font-medium text-gray-900 shadow-sm hover:bg-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
                     >
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M21 12.79A9 9 0 1111.21 3H21v9.79z" />
+                      </svg>
                       Send Message
                     </button>
                   </div>
